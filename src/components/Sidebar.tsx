@@ -15,6 +15,7 @@ const Sidebar = () => {
       {addModal && <AddArtist onClose={() => setAddModal(false)} />}
       {deleteModal && <ConfirmDelete onClose={() => setDeleteModal(false)} />}
       <div className="flex flex-col">
+        <div className="text-lg font-bold m-4">Artists</div>
         <div className="overflow-y-scroll max-h-[40rem] mx-2">
           <ArtistList />
         </div>

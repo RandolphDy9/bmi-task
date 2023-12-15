@@ -8,7 +8,13 @@ const HomePage = () => {
   return (
     <>
       <Sidebar />
-      {selectedArtist && <ArtistDetails props={selectedArtist} />}
+      {(selectedArtist && selectedArtist?.id !== '') ? <ArtistDetails props={selectedArtist} /> : (
+        <div className="m-6 grid col-span-9 border rounded-xl bg-white">
+          <div className="flex justify-center items-center">
+            Select an artist from the sidebar.
+          </div>
+        </div>
+      )}
     </>
   );
 };
